@@ -1,4 +1,4 @@
-import os
+from os import system
 import xmlrpclib
 from SimpleXMLRPCServer import SimpleXMLRPCServer
 
@@ -9,6 +9,7 @@ def clear_buffer_cache():
 	system('sync')
 	system("sudo sed -n 's/3/0/w /proc/sys/vm/drop_caches' /proc/sys/vm/drop_caches")
 	system('free -g')
+	return true
 
 def is_even(n):
 	return n%2 == 0
